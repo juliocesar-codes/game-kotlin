@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
             GameComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     GameOverScreen(modifier = Modifier.padding(innerPadding))
+//                    ScreenGame(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -50,13 +51,14 @@ fun ScreenGame(modifier: Modifier = Modifier) {
         modifier = modifier
             .background(Color.Black)
             .fillMaxSize()
+        , verticalArrangement = Arrangement.SpaceBetween
     ) {
-        Row(
+        Column() { Row(
             modifier = modifier
                 .fillMaxWidth()
             , horizontalArrangement = Arrangement.SpaceBetween,
 
-        ) {
+            ) {
             Row(
                 modifier = modifier
             ) {
@@ -85,27 +87,28 @@ fun ScreenGame(modifier: Modifier = Modifier) {
             }
         }
 
-        Row(
-            modifier = modifier
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-        ) {
-            AndroidEnemy(
-                color = Color.Green
-            )
-            AndroidEnemy(
-                color = Color.Red
-            )
-            AndroidEnemy(
-                color = Color.Blue
-            )
-            AndroidEnemy(
-                color = Color.Yellow
-            )
-            AndroidEnemy(
-                color = Color.Green
-            )
-        }
+            Row(
+                modifier = modifier
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                AndroidEnemy(
+                    color = Color.Green
+                )
+                AndroidEnemy(
+                    color = Color.Red
+                )
+                AndroidEnemy(
+                    color = Color.Blue
+                )
+                AndroidEnemy(
+                    color = Color.Yellow
+                )
+                AndroidEnemy(
+                    color = Color.Green
+                )
+            }}
+
         Column(
             modifier = modifier
                 .fillMaxWidth(),
@@ -134,7 +137,8 @@ fun GameOverScreen(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .background(Color.Black)
-            .fillMaxSize()
+            .fillMaxSize(),
+        contentAlignment = Alignment.Center
     ){
         Row(
             modifier = modifier
@@ -157,6 +161,11 @@ fun GameOverScreen(modifier: Modifier = Modifier) {
                 color = Color.Green
             )
         }
+        Text(
+            text = "GAME OVER",
+            color = Color.White,
+            fontSize = 45.sp
+        )
     }
 }
 
