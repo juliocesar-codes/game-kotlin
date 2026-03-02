@@ -145,21 +145,11 @@ fun GameOverScreen(modifier: Modifier = Modifier) {
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
-            AndroidEnemy(
-                color = Color.Green
-            )
-            AndroidEnemy(
-                color = Color.Red
-            )
-            AndroidEnemy(
-                color = Color.Blue
-            )
-            AndroidEnemy(
-                color = Color.Yellow
-            )
-            AndroidEnemy(
-                color = Color.Green
-            )
+            AndroidEnemy(color = Color.Green)
+            AndroidEnemy(color = Color.Red)
+            AndroidEnemy(color = Color.Blue)
+            AndroidEnemy(color = Color.Yellow)
+            AndroidEnemy(color = Color.Green)
         }
         Text(
             text = "GAME OVER",
