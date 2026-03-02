@@ -37,8 +37,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             GameComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GameOverScreen(modifier = Modifier.padding(innerPadding))
-//                    ScreenGame(modifier = Modifier.padding(innerPadding))
+//                    GameOverScreen(modifier = Modifier.padding(innerPadding))
+                    ScreenGame(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
